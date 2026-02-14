@@ -1,0 +1,13 @@
+const handleEmailClick = () => {
+
+  const email = "albertkagwanja917@gmail.com";
+
+  const subject = encodeURIComponent("Inquiry for Mediation Services");
+
+  const body = encodeURIComponent("Hello Albert,\n\nI found your website and would like to discuss a potential mediation case regarding...");
+
+
+
+  window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`, "_blank");
+
+};
