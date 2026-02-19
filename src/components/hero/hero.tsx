@@ -7,10 +7,6 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
   return (
-    /* 1. Used min-h-screen for better mobile browser support.
-       2. Changed py-22 to pt-28 pb-12 on mobile to account for fixed navbars.
-       3. Used justify-center on mobile so content stays centered if it doesn't fill the whole 90vh.
-    */
     <section className="flex flex-col md:flex-row items-center justify-center md:justify-between px-6 pt-28 pb-12 md:p-20 bg-slate-50 min-h-[90vh]">
       
       {/* Text Content */}
@@ -41,22 +37,26 @@ const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
       </div>
 
       {/* Image Container */}
-      <div className="w-full md:w-1/2 relative mt-10 md:mt-0 flex justify-center items-center">
-        {/* Decorative Background Elements - Scaled down for mobile */}
+      <div className="w-full md:w-1/2 relative mt-12 md:mt-0 flex justify-center items-center">
+        {/* Decorative Background Elements */}
         <div className="absolute -top-4 -right-4 w-40 h-40 md:w-64 md:h-64 bg-red-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
         <div className="absolute -bottom-6 -left-6 w-40 h-40 md:w-64 md:h-64 bg-yellow-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
 
-        <div className="relative group w-full max-w-[280px] sm:max-w-md">
+        {/* FIX: Set a max-width for the image container rather than a max-height for the image itself.
+            This prevents stretching while keeping the size professional on mobile.
+        */}
+        <div className="relative group w-full max-w-[300px] sm:max-w-sm md:max-w-md">
           <img 
             src={MyImage} 
             alt="Albert Murage Kagwanja" 
-            /* Added max-h-[40vh] on mobile so the image doesn't push 
-               the content off the screen.
+            /* className updates:
+               - h-auto ensures the height scales perfectly with the width.
+               - object-contain ensures no stretching occurs.
             */
-            className="relative rounded-2xl shadow-2xl w-full max-h-[30vh] md:max-h-none object-cover border-4 border-white transition-transform duration-500 group-hover:scale-[1.02]" 
+            className="relative rounded-2xl shadow-2xl w-full h-auto object-contain border-4 border-white transition-transform duration-500 group-hover:scale-[1.02]" 
           />
           
-          {/* Subtle tag overlay - Smaller text on mobile */}
+          {/* Subtle tag overlay */}
           <div className="absolute bottom-3 right-3 bg-white/90 backdrop-blur px-3 py-1.5 md:px-4 md:py-2 rounded-lg shadow-md border border-gray-100 text-right">
             <p className="text-red-700 font-bold text-xs md:text-sm">Albert Murage Kagwanja</p>
             <p className="text-[8px] md:text-[10px] uppercase tracking-widest text-gray-500 font-semibold">ADR Expert & Mediator</p>
