@@ -21,7 +21,7 @@ const Qualifications = () => {
     {
     
       icon: <Users className="w-8 h-8 text-red-700" />,
-      title: "Internationally Accredited Mediator Trainer of Trainers",
+      title: "International Accredited Mediator Trainer of Trainers",
       institution: "Kenya Judiciary Academy & BREAKTHROUGH ADR",
       description: "Completed an intensive Training of Mediation Trainers Course, awarded Dec 2025.",
       link: 'https://pdflink.to/mediationtrainer/'
