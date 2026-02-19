@@ -1,32 +1,36 @@
-import { Award, GraduationCap, Gavel, CheckCircle2, Users } from 'lucide-react';
+import { Award, GraduationCap, Gavel, CheckCircle2, Users, ExternalLink } from 'lucide-react';
 import MyImage from '../../assets/image.png';
 
 const Qualifications = () => {
   const credentials = [
     {
-      // New qualification from your PDF certificate 
+      // New qualification from your PDF certificate [cite: 5, 6, 7]
       icon: <Users className="w-8 h-8 text-red-700" />,
       title: "Mediation Trainer",
       institution: "Kenya Judiciary Academy & BREAKTHROUGHADR",
-      description: "Completed an intensive Training of Mediation Trainers Course, awarded Dec 2025."
+      description: "Completed an intensive Training of Mediation Trainers Course, awarded Dec 2025.",
+      link: 'https://pdflink.to/mediationtrainer/'
     },
     {
       icon: <GraduationCap className="w-8 h-8 text-red-700" />,
       title: "Internationally Trained",
       institution: "Strathmore University Law School",
-      description: "Advanced expertise in Alternative Dispute Resolution (ADR) and legal frameworks."
+      description: "Advanced expertise in Alternative Dispute Resolution (ADR) and legal frameworks.", 
+      link: ''
     },
     {
       icon: <Award className="w-8 h-8 text-red-700" />,
       title: "Certified Professional",
       institution: "Professional Mediator (CPM)",
-      description: "Expertise in high-stakes negotiation, communication, and conflict management."
+      description: "Expertise in high-stakes negotiation, communication, and conflict management.",
+      link: ''
     },
     {
       icon: <Gavel className="w-8 h-8 text-red-700" />,
       title: "Court-Accredited",
       institution: "Judiciary Authorized",
-      description: "Authorized for Court Annexed Mediation (CAM) and Mediation Training of Trainers (TOT)."
+      description: "Authorized for Court Annexed Mediation (CAM) and Mediation Training of Trainers (TOT).", 
+      link: ''
     }
   ];
 
@@ -46,18 +50,15 @@ const Qualifications = () => {
             <img 
               src={MyImage} 
               alt="Logo"
-              /* Updated: w-64 h-64 for a larger look. 
-                 Changed rounded-full to rounded-2xl so it doesn't cover too much content.
-              */
               className="w-56 h-56 md:w-64 md:h-64 object-contain rounded-full border-2 border-slate-100 shadow-xl mb-4 transition-transform duration-300 hover:scale-105 p-2 bg-white"
             />
           </div>
         </div>
 
-        {/* Credentials Grid - Updated to 4 columns to fit the new certificate */}
+        {/* Credentials Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {credentials.map((item, index) => (
-            <div 
+           <div 
               key={index} 
               className="p-8 rounded-2xl border border-slate-100 bg-slate-50 hover:bg-white hover:shadow-xl hover:border-red-100 transition-all duration-300 group"
             >
@@ -68,9 +69,21 @@ const Qualifications = () => {
               <p className="text-red-700 font-semibold text-sm mb-4 uppercase tracking-wide">
                 {item.institution}
               </p>
-              <p className="text-slate-600 leading-relaxed">
+              <p className="text-slate-600 leading-relaxed mb-6 flex-grow">
                 {item.description}
               </p>
+
+              {/* Only shows the link if 'link' property has a value */}
+              {item.link && (
+                <a 
+                  href={item.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-flex items-center gap-2 text-red-700 font-bold text-sm hover:underline"
+                >
+                  View Certificate <ExternalLink size={14} />
+                </a>
+              )}
             </div>
           ))}
         </div>
@@ -79,11 +92,11 @@ const Qualifications = () => {
         <div className="mt-12 flex flex-col md:flex-row items-center justify-center gap-6 p-6 bg-red-700 rounded-2xl text-white">
           <div className="flex items-center gap-3">
             <CheckCircle2 className="text-yellow-400" />
-            <span className="text-lg font-bold">Licensed Paralegal</span>
+            <span className="text-lg font-bold">Licensed Paralegal</span> 
           </div>
           <div className="hidden md:block h-6 w-px bg-red-500/50"></div>
           <p className="text-red-50 font-medium text-center md:text-left">
-            Licensed for All Court Civil Process Services & Civil Investigations
+            Licensed for All Court Civil Process Services & Civil Investigations 
           </p>
         </div>
         
