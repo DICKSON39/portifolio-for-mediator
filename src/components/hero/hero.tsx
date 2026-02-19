@@ -8,7 +8,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between px-6 py-22 md:p-20 bg-slate-50 min-h-[80vh]">
+    <section className="flex flex-col md:flex-row items-center justify-between px-6 py-22 md:p-20 bg-slate-50 min-h-[100vh]">
       {/* Text Content */}
       <div className="md:w-1/2 space-y-8 animate-in fade-in slide-in-from-left duration-700">
         <div className="space-y-4">
