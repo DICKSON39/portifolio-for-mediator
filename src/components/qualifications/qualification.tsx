@@ -1,8 +1,15 @@
-
-import { Award, GraduationCap, Gavel, CheckCircle2 } from 'lucide-react';
+import { Award, GraduationCap, Gavel, CheckCircle2, Users } from 'lucide-react';
+import MyImage from '../../assets/image.png';
 
 const Qualifications = () => {
   const credentials = [
+    {
+      // New qualification from your PDF certificate 
+      icon: <Users className="w-8 h-8 text-red-700" />,
+      title: "Mediation Trainer",
+      institution: "Kenya Judiciary Academy & BREAKTHROUGHADR",
+      description: "Completed an intensive Training of Mediation Trainers Course, awarded Dec 2025."
+    },
     {
       icon: <GraduationCap className="w-8 h-8 text-red-700" />,
       title: "Internationally Trained",
@@ -33,8 +40,22 @@ const Qualifications = () => {
           <div className="w-20 h-1 bg-red-700 mx-auto mt-4 rounded-full"></div>
         </div>
 
-        {/* Credentials Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        {/** Updated Logo/Image Section */}
+        <div className='flex flex-col items-center mb-16'>
+          <div className="relative">
+            <img 
+              src={MyImage} 
+              alt="Logo"
+              /* Updated: w-64 h-64 for a larger look. 
+                 Changed rounded-full to rounded-2xl so it doesn't cover too much content.
+              */
+              className="w-56 h-56 md:w-64 md:h-64 object-contain rounded-full border-2 border-slate-100 shadow-xl mb-4 transition-transform duration-300 hover:scale-105 p-2 bg-white"
+            />
+          </div>
+        </div>
+
+        {/* Credentials Grid - Updated to 4 columns to fit the new certificate */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {credentials.map((item, index) => (
             <div 
               key={index} 

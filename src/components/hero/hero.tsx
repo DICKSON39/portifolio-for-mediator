@@ -1,5 +1,5 @@
 import React from 'react';
-import MyImage from '../../assets/image.png';
+import MyImage from '../../assets/main.png';
 
 // Define the interface to fix the potential 'any' type error
 interface HeroProps {
@@ -8,7 +8,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between px-6 py-16 md:p-20 bg-slate-50 min-h-[80vh]">
+    <section className="flex flex-col md:flex-row items-center justify-between px-6 py-22 md:p-20 bg-slate-50 min-h-[80vh]">
       {/* Text Content */}
       <div className="md:w-1/2 space-y-8 animate-in fade-in slide-in-from-left duration-700">
         <div className="space-y-4">
