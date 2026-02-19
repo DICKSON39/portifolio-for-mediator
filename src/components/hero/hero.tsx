@@ -42,18 +42,14 @@ const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
         <div className="absolute -top-4 -right-4 w-40 h-40 md:w-64 md:h-64 bg-red-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
         <div className="absolute -bottom-6 -left-6 w-40 h-40 md:w-64 md:h-64 bg-yellow-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
 
-        {/* FIX: Set a max-width for the image container rather than a max-height for the image itself.
-            This prevents stretching while keeping the size professional on mobile.
+        {/* FIX: Reduced max-width to 250px on small screens and 400px on desktop.
+            The 'h-auto' combined with 'max-h' ensures it stays short but proportional.
         */}
-        <div className="relative group w-full max-w-[300px] sm:max-w-sm md:max-w-md">
+        <div className="relative group w-full max-w-[250px] sm:max-w-xs md:max-w-[400px]">
           <img 
             src={MyImage} 
             alt="Albert Murage Kagwanja" 
-            /* className updates:
-               - h-auto ensures the height scales perfectly with the width.
-               - object-contain ensures no stretching occurs.
-            */
-            className="relative rounded-2xl shadow-2xl w-full h-auto object-contain border-4 border-white transition-transform duration-500 group-hover:scale-[1.02]" 
+            className="relative rounded-2xl shadow-2xl w-full h-auto max-h-[400px] md:max-h-[500px] object-cover border-4 border-white transition-transform duration-500 group-hover:scale-[1.02]" 
           />
           
           {/* Subtle tag overlay */}
