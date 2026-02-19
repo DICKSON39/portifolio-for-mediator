@@ -11,7 +11,7 @@ const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
        2. Changed py-22 to pt-28 pb-12 on mobile to account for fixed navbars.
        3. Used justify-center on mobile so content stays centered if it doesn't fill the whole 90vh.
     */
-    <section className="flex flex-col md:flex-row items-center justify-center md:justify-between px-6 pt-28 pb-12 md:p-20 bg-slate-50 min-h-screen">
+    <section className="flex flex-col md:flex-row items-center justify-center md:justify-between px-6 pt-28 pb-12 md:p-20 bg-slate-50 min-h-[90vh]">
       
       {/* Text Content */}
       <div className="w-full md:w-1/2 space-y-6 md:space-y-8 animate-in fade-in slide-in-from-left duration-700 z-10">
