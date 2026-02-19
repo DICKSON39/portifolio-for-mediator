@@ -3,26 +3,12 @@ import MyImage from '../../assets/image.png';
 
 const Qualifications = () => {
   const credentials = [
-    {
-      // New qualification from your PDF certificate [cite: 5, 6, 7]
-      icon: <Users className="w-8 h-8 text-red-700" />,
-      title: "Mediation Trainer",
-      institution: "Kenya Judiciary Academy & BREAKTHROUGHADR",
-      description: "Completed an intensive Training of Mediation Trainers Course, awarded Dec 2025.",
-      link: 'https://pdflink.to/mediationtrainer/'
-    },
-    {
+
+     {
       icon: <GraduationCap className="w-8 h-8 text-red-700" />,
-      title: "Internationally Trained",
+      title: "Internationally Accredited",
       institution: "Strathmore University Law School",
       description: "Advanced expertise in Alternative Dispute Resolution (ADR) and legal frameworks.", 
-      link: ''
-    },
-    {
-      icon: <Award className="w-8 h-8 text-red-700" />,
-      title: "Certified Professional",
-      institution: "Professional Mediator (CPM)",
-      description: "Expertise in high-stakes negotiation, communication, and conflict management.",
       link: ''
     },
     {
@@ -31,7 +17,24 @@ const Qualifications = () => {
       institution: "Judiciary Authorized",
       description: "Authorized for Court Annexed Mediation (CAM) and Mediation Training of Trainers (TOT).", 
       link: ''
-    }
+    },
+    {
+    
+      icon: <Users className="w-8 h-8 text-red-700" />,
+      title: "Internationally Accredited Mediator Trainer of Trainer",
+      institution: "Kenya Judiciary Academy & BREAKTHROUGH ADR",
+      description: "Completed an intensive Training of Mediation Trainers Course, awarded Dec 2025.",
+      link: 'https://pdflink.to/mediationtrainer/'
+    },
+   
+    {
+      icon: <Award className="w-8 h-8 text-red-700" />,
+      title: "Certified Professional",
+      institution: "Professional Mediator (CPM)",
+      description: "Expertise in high-stakes negotiation, communication, and conflict management.",
+      link: ''
+    },
+    
   ];
 
   return (
