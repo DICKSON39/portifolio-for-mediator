@@ -9,7 +9,7 @@ const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
   return (
     /* 1. Used min-h-screen for better mobile browser support.
        2. Changed py-22 to pt-28 pb-12 on mobile to account for fixed navbars.
-       3. Used justify-center on mobile so content stays centered if it doesn't fill the whole 100vh.
+       3. Used justify-center on mobile so content stays centered if it doesn't fill the whole 90vh.
     */
     <section className="flex flex-col md:flex-row items-center justify-center md:justify-between px-6 pt-28 pb-12 md:p-20 bg-slate-50 min-h-screen">
       
@@ -53,7 +53,7 @@ const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
             /* Added max-h-[40vh] on mobile so the image doesn't push 
                the content off the screen.
             */
-            className="relative rounded-2xl shadow-2xl w-full max-h-[40vh] md:max-h-none object-cover border-4 border-white transition-transform duration-500 group-hover:scale-[1.02]" 
+            className="relative rounded-2xl shadow-2xl w-full max-h-[30vh] md:max-h-none object-cover border-4 border-white transition-transform duration-500 group-hover:scale-[1.02]" 
           />
           
           {/* Subtle tag overlay - Smaller text on mobile */}
