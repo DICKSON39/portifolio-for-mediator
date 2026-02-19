@@ -6,7 +6,7 @@ const Qualifications = () => {
 
      {
       icon: <GraduationCap className="w-8 h-8 text-red-700" />,
-      title: "Internationally Accredited",
+      title: "Internationally Accredited ",
       institution: "Strathmore University Law School",
       description: "Advanced expertise in Alternative Dispute Resolution (ADR) and legal frameworks.", 
       link: ''
@@ -29,7 +29,7 @@ const Qualifications = () => {
    
     {
       icon: <Award className="w-8 h-8 text-red-700" />,
-      title: "Certified Professional",
+      title: "Certified Professional Mediator",
       institution: "Professional Mediator (CPM)",
       description: "Expertise in high-stakes negotiation, communication, and conflict management.",
       link: ''
