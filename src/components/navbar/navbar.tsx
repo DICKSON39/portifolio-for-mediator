@@ -27,7 +27,7 @@ const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
             </div>
             <div className="flex flex-col leading-tight">
               <span className="text-lg font-bold text-gray-900 tracking-tight">
-                ALBERT MURAGE
+                ALBERT KAGWANJA
               </span>
               <span className="text-xs font-semibold text-red-700 uppercase tracking-widest">
                 Professional Mediator
