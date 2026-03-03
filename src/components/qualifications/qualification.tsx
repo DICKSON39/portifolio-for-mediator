@@ -24,7 +24,7 @@ const Qualifications = () => {
       title: "International Accredited Mediator Trainer of Trainers",
       institution: "Kenya Judiciary Academy & BREAKTHROUGH ADR",
       description: "Completed an intensive Training of Mediation Trainers Course, awarded Dec 2025.",
-      link: 'https://pdflink.to/mediationtrainer/'
+      link: ''
     },
    
     {
